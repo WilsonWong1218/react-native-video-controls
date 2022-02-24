@@ -1140,7 +1140,7 @@ export default class VideoPlayer extends Component {
     return this.renderControl(
       <Image
         source={require('./assets/img/backRewind.png')}
-        style={{width: 15, height: 15}}
+        style={{width: 15, height: 15, marginRight: '30%'}}
       />,
       this.methods.backRewind,
     );
