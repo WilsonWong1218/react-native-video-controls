@@ -522,7 +522,7 @@ export default class VideoPlayer extends Component {
    */
   _toggleFastForward() {
     let state = this.state;
-    this.player.ref.seek(state.currentTime + 15);
+    this.player.ref.seek(state.currentTime + 10);
   }
 
   /**
@@ -530,7 +530,7 @@ export default class VideoPlayer extends Component {
    */
   _toggleBackRewind() {
     let state = this.state;
-    this.player.ref.seek(state.currentTime - 15);
+    this.player.ref.seek(state.currentTime - 10);
   }
 
   /**
@@ -1066,6 +1066,7 @@ export default class VideoPlayer extends Component {
               style={{
                 display: 'flex',
                 flexDirection: 'row',
+                width: '50%',
                 justifyContent: 'space-between',
               }}>
               {this.renderBackRewind()}
@@ -1140,7 +1141,7 @@ export default class VideoPlayer extends Component {
     return this.renderControl(
       <Image
         source={require('./assets/img/backRewind.png')}
-        style={{width: 15, height: 15, marginRight: '30%'}}
+        style={{width: 15, height: 15, }}
       />,
       this.methods.backRewind,
     );
