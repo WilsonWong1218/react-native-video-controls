@@ -522,7 +522,7 @@ export default class VideoPlayer extends Component {
    */
   _toggleFastForward() {
     let state = this.state;
-    this.player.ref.seek(state.currentTime + 10);
+    this.player.ref.seek(state.currentTime + 15);
   }
 
   /**
@@ -530,7 +530,7 @@ export default class VideoPlayer extends Component {
    */
   _toggleBackRewind() {
     let state = this.state;
-    this.player.ref.seek(state.currentTime - 10);
+    this.player.ref.seek(state.currentTime - 15);
   }
 
   /**
